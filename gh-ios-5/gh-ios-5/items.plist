@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Java in a Box</key>
+	<string>Bruce Eckel</string>
+	<key>The Java Language Specification</key>
+	<string>Gilad Bracha</string>
+	<key>Java Phrasebook</key>
+	<string>Timothy Fisher</string>
+	<key>Thinking in Java</key>
+	<string>Bruce Eckel</string>
+	<key>Java Enterprise in a Nutshell</key>
+	<string>David Flanagan</string>
+	<key>The Religion of Java</key>
+	<string>Clifford Geertz</string>
+	<key>Head First Design Patterns</key>
+	<string>Elisabeth Freeman</string>
+	<key>Hooked on Java</key>
+	<string>Arthur van Hoff</string>
+	<key>Head First Java</key>
+	<string>Kathy Sierra</string>
+	<key>Java, A Beginner&apos;s Guide</key>
+	<string>Herbert Schildt</string>
+	<key>Test Driven Development: By Example</key>
+	<string>Kent Beck</string>
+	<key>Effective Java</key>
+	<string>Joshua Bloch</string>
+	<key>The Pragmatic Programmer: From Journeyman to Master</key>
+	<string>Andrew Hunt</string>
+	<key>Clean Code: A Handbook of Agile Software Craftsmanship</key>
+	<string>Robert C. Martin</string>
+</dict>
+</plist>

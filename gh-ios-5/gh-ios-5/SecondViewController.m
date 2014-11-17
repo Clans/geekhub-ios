@@ -20,7 +20,7 @@
     [super viewDidLoad];
 
     CGFloat height = self.view.frame.size.height - self.tabBarController.tabBar.frame.size.height;
-    CGRect rect = CGRectMake(0, 20, self.view.frame.size.width, height);
+    CGRect rect = CGRectMake(0, 20, self.view.frame.size.width, height - 20);
     
     mTableView = [[UITableView alloc] initWithFrame:rect];
     [self.view addSubview:mTableView];

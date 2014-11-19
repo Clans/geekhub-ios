@@ -14,16 +14,16 @@
 
 @implementation FirstViewController
 
-@synthesize books;
-@synthesize bookKeys;
+//@synthesize books;
+//@synthesize bookKeys;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     NSString *file = [[NSBundle mainBundle] pathForResource:@"items" ofType:@"plist"];
     
-    books = [[NSDictionary alloc] initWithContentsOfFile:file];
-    bookKeys = [books allKeys];
+    _books = [[NSDictionary alloc] initWithContentsOfFile:file];
+    _bookKeys = [_books allKeys];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,7 +33,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return [books count];
+        return [_books count];
     } else {
         return 10;
     }
@@ -48,7 +48,7 @@
     
     NSString *bookName;
     if (indexPath.section == 0) {
-        bookName = [bookKeys objectAtIndex:indexPath.row];
+        bookName = [_bookKeys objectAtIndex:indexPath.row];
     } else {
         bookName = [[NSString alloc] initWithFormat:@"Item %li", (long)indexPath.row];
     }
@@ -57,7 +57,7 @@
     
     NSString *authorName;
     if (indexPath.section == 0) {
-        authorName = [books objectForKey:[bookKeys objectAtIndex:indexPath.row]];
+        authorName = [_books objectForKey:[_bookKeys objectAtIndex:indexPath.row]];
     } else {
         authorName = [[NSString alloc] initWithFormat:@"Description for item %li", (long)indexPath.row];
     }

@@ -25,7 +25,16 @@ NSString *const IPadCellIdentifier = @"IPadCellIdentifier";
     [super viewDidLoad];
     _iPhones = [[NSArray alloc] initWithObjects:@"iPhone", @"iPhone 3GS", @"iPhone 4", @"iPhone 5", @"iPhone 6", nil];
     _iPads = [[NSArray alloc] initWithObjects:@"iPad 2", @"iPad 3", @"iPad 4", @"iPad Air", nil];
-    
+
+    NSDictionary *devices = [[NSDictionary alloc] initWithObjectsAndKeys:_iPhones, @"iphones", _iPads, @"ipads", nil];
+    NSArray *iphones = [devices objectForKey:@"iphones"];
+
+    NSDictionary *devices2 = @{@"iphones" : _iPhones, @"ipads" : _iPads};
+    NSArray *ipads = devices2[@"iphones"];
+
+    NSLog(@"iPhones: %@", iphones);
+    NSLog(@"iPads: %@", ipads);
+
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:tableView];
     [tableView setDataSource:self];

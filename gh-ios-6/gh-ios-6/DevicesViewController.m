@@ -59,18 +59,18 @@ NSString *const IPadCellIdentifier = @"IPadCellIdentifier";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId] autorelease];
     }
     
     NSString *title;
     if (indexPath.section == 0) {
-        title = [_iPhones objectAtIndex:indexPath.row];
+        title = _iPhones[indexPath.row];
     } else {
         title = [_iPads objectAtIndex:indexPath.row];
     }
     
     [[cell textLabel] setText:title];
-    
+
     return cell;
 }
 

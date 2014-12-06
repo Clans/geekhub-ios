@@ -170,7 +170,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N0x-Rh-00A">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="160" y="732" width="160" height="160"/>
+                                                    <rect key="frame" x="-16" y="0.0" width="0.0" height="0.0"/>
                                                 </variation>
                                             </imageView>
                                         </subviews>

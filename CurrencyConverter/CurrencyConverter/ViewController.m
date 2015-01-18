@@ -10,6 +10,7 @@
 #import "ActionSheetStringPicker.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "Currency.h"
+#import "math.h"
 
 @interface ViewController ()
 
@@ -113,7 +114,7 @@ static NSString * const URL = @"https://api.privatbank.ua/p24api/pubinfo?json&ex
 }
 
 - (IBAction)convert:(id)sender {
-    double amount = [_amount.text doubleValue];
+    double amount = abs([_amount.text doubleValue]);
     double rate;
     double result;
     
@@ -144,9 +145,9 @@ static NSString * const URL = @"https://api.privatbank.ua/p24api/pubinfo?json&ex
     _currenciesArray = [[NSMutableArray alloc] init];
     
     for (NSDictionary *object in responseArray) {
-        Currency *test = [Currency new];
-        [test setValuesForKeysWithDictionary:object];
-        [_currenciesArray addObject:test];
+        Currency *currency = [Currency new];
+        [currency setValuesForKeysWithDictionary:object];
+        [_currenciesArray addObject:currency];
     }
     
     [self initPickers];
